@@ -9,13 +9,13 @@
 pytorch == 1.2.0
 
 ## 文件下载
-训练所需的预训练权重都可以在百度云下载。     
-链接: 
-提取码: 
+训练所需的预训练权重都可以在百度云下载。  
+链接：https://pan.baidu.com/s/14y4DqGlbRgOAW4h74SqjDA 
+提取码：93rj
 
 训练所用的示例数据集也可以在百度云下载。   
-链接: 
-提取码:  
+链接: https://pan.baidu.com/s/1x-1VcW_xBANkQbR8Sb8DlQ 
+提取码: mtxo
 
 ## 训练步骤
 1. datasets文件夹下存放的图片分为两部分，train里面是训练图片，test里面是测试图片。  
@@ -24,7 +24,6 @@ pytorch == 1.2.0
 |-datasets
     |-train
     |-test
-
 ```
 3. 在准备好数据集后，需要在根目录运行txt_annotation.py生成训练所需的cls_train.txt，运行前需要修改其中的classes，将其修改成自己需要分的类。   
 4. 之后修改model_data文件夹下的cls_classes.txt，使其也对应自己需要分的类。  
@@ -77,7 +76,6 @@ img/test.jpg
 |-data
     |-train
     |-test
-
 ```
 3. 在准备好数据集后，需要在根目录运行txt_annotation.py生成评估所需的cls_test.txt，运行前需要修改其中的classes，将其修改成自己需要分的类。   
 4. 之后在classification.py文件里面修改如下部分model_path、classes_path、backbone和alpha使其对应训练好的文件；**model_path对应logs文件夹下面的权值文件，classes_path是model_path对应分的类，backbone对应使用的主干特征提取网络，alpha是当使用mobilenet的alpha值**。  
